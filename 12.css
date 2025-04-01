@@ -1,0 +1,39 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    justify-content:space-between;
+    background-color: white;
+    align-items: center;
+    gap: 10px;
+    padding-right: 100px;
+    padding: 20px;
+    padding-left: 10px;
+}
+.logo input{
+    width: 300px;
+    height: 30px;
+    padding-left: 5px;
+}
+nav a{
+    font-size: large;
+    text-decoration: none;
+    color: black;
+}
+nav{
+    display: flex;
+    gap: 50px;
+    text-align: center;
+    padding-right: 20px;
+}
+nav img{
+    width: 30px;
+    height: 30px;
+}
