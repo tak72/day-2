@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Style Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    font-family: sans-serif;
+    background-color: #000000;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+}
+
+.category {
+    margin-bottom: 30px;
+}
+
+.category h2 {
+    margin-bottom: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.badge {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color: #e50914;
+    color: #fff;
+    padding: 5px 8px;
+    font-size: 0.8em;
+    border-radius: 4px;
+}
+
+.top-10 .top-badge {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #e50914;
+    color: #fff;
+    padding: 5px 8px;
+    font-size: 0.8em;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.placeholder {
+    background-color: #222;
+    height: 225px; /* Approximate height based on the image aspect ratio */
+    border-radius: 4px;
+}
+header {
+    position: fixed;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 100px;
+    top: 0%;
+    left: 0;
+    z-index: 1000; 
+}
+nav a{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: small;
+    font-weight: bold;
+}
+.search a {
+     text-decoration: none;    
+     color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-items: center;
+    gap: 20px;
+    padding-right: 70px;
+    font-size: small;
+    font-weight: bold;
+}
+.logo a {
+    color: crimson;
+    text-decoration: none;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    padding-right: 30px;
+}
+#head {
+    color: aliceblue;
+    font-size: 100px;
+padding-left: 20px;
+
+}
+.footer {
+            background-color: #000;
+            color: #757575;
+            padding: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 1000px;
+            width: 90%;
+            margin-bottom: 20px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .footer-lists {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .footer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 25%;
+        }
+
+        .footer-list li {
+            margin-bottom: 10px;
+        }
+
+        .footer-list a {
+            color: #757575;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-list a:hover {
+            text-decoration: underline;
+        }
+
+        .language-select {
+            background-color: transparent;
+            border: 1px solid #757575;
+            color: #757575;
+            padding: 10px;
+            margin-top: 10px;
+            width: 130px;
+            border-radius: 5px;
+            font-size: 13px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .language-select:focus {
+            outline: none;
+            border-color: #fff;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: #757575;
+            margin-top: 10px;
+        }
+
+        .netflix-logo {
+            color: #e50914;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-lists {
+                flex-wrap: wrap;
+            }
+            .footer-list {
+                width: 50%;
+                margin-bottom: 20px;
+            }
+             .footer-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-list {
+                width: 100%;
+            }
+        }
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">NETFLIX</a>
+            </div>
+            <nav>
+                <a href="netflix.html">Home</a>
+                <a href="tv show.html">Tv show</a>
+                <a href="#">Movies</a>
+                <a href="#">New & Popular</a>
+                <a href="#">My List</a>
+            </nav> 
+            <div class="search">
+               <a href="#">Search</a>
+               <a href="#">Notification</a>
+               <a href="si">Profile</a>
+            </div>
+        </header>
+    <div class="container">
+        <section class="category">
+            <h2>TV Show</h2>
+            <div class="grid">
+                <div class="item">
+                    <img src="https://irs.www.warnerbros.com/keyart-jpeg/flipped_keyart.jpg" alt="Monty Python's Flying Circus">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_FMjpg_UX1000_.jpg" alt="Total Drama">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BY2JjNjg2ZDItOTVhYy00YmI5LWJkYjktM2M0MTBlM2RlN2I5XkEyXkFqcGc@._V1_.jpg" alt="Grace and Frankie">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZjkxZWJiNTUtYjQwYS00MTBlLTgwODQtM2FkNWMyMjMwOGZiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Space Force">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZTBiZDQ2MWEtYzE1MC00YmMyLTg1NjUtNzE2YTZlMjI3MGUxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="SpongeBob SquarePants">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNzNmNmQ2ZDEtMTc1MS00NjNiLThlMGUtZmQxNTg1Nzg5NWMzXkEyXkFqcGc@._V1_.jpg" alt="Home for Christmas">
+                    <div class="badge">NEW EPISODES</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>New Releases</h2>
+            <div class="grid">
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTM3NDAzNzE0NV5BMl5BanBnXkFtZTcwNTY4NTI4OQ@@._V1_.jpg" alt="The Playbook">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYWE3YmU3MTUtN2QwNy00ODQ4LThlMWQtMGExMTA5NWI2OTVjXkEyXkFqcGc@._V1_QL75_UY281_CR18,0,190,281_.jpg" alt="How to Sell Drugs Online (Fast)">
+                </div>
+                <div class="item">
+                    <img src="space_force_s2.jpg" alt="Space Force">
+                </div>
+                <div class="item">
+                    <img src="elite.jpg" alt="Elite">
+                </div>
+                <div class="item top-10">
+                    <img src="sabrina.jpg" alt="Chilling Adventures of Sabrina">
+                    <div class="badge">NEW EPISODES</div>
+                    <div class="top-badge">TOP 10</div>
+                </div>
+                <div class="item">
+                    <img src="alice_in_borderland.jpg" alt="Alice in Borderland">
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2></h2>
+            <div class="grid">
+                <div class="item placeholder"></div>
+                <div class="item placeholder"></div>
+                <div class="item placeholder"></div>
+                <div class="item placeholder"></div>
+                <div class="item placeholder"></div>
+                <div class="item placeholder"></div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="netflix-logo">Netflix</div>
+            </div>
+            <div class="footer-lists">
+                <ul class="footer-list">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Ways to Watch</a></li>
+                    <li><a href="#">Only on Netflix</a></li>
+                </ul>
+                <ul class="footer-list">
+                    <li><a href="#">Cookie Preferences</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                </ul>
+                <ul class="footer-list">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Speed Test</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Jobs</a></li>
+                </ul>
+                 <ul class="footer-list">
+                    <li><a href="#">Gift Card Terms</a></li>
+                    <li><a href="#">Legal Notices</a></li>
+                    <li><a href="#">Media Center</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                </ul>
+            </div>
+            <div class="language-select">
+                <span>English</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg/1200px-Flag_of_Great_Britain_%281707%E2%80%931800%29.svg.png" alt="English" width="16" height="16">
+            </div>
+            <p class="copyright">&copy; 1997-2024 Netflix, Inc.</p>
+        </div>
+    </footer>
+</body>
+</html>
